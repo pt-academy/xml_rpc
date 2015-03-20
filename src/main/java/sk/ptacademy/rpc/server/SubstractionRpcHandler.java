@@ -19,9 +19,10 @@ public class SubstractionRpcHandler implements XmlRpcHandler{
         if(xmlRpcRequest.getParameterCount() != 2){
             return("Invalid number of parameters.");
         }
+        
         Double operandA = Double.parseDouble(xmlRpcRequest.getParameter(0).toString());
         Double operandB = Double.parseDouble(xmlRpcRequest.getParameter(1).toString());
-        return operandA - operandB;
+        return operandA.doubleValue() - operandB.doubleValue();
     }
     
 }
