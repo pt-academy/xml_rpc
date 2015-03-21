@@ -53,6 +53,20 @@ public class SimpleRpcServerTest {
         }
     }
     
+    @Test
+    public void testMultiplication() throws XmlRpcException{
+        List params = new ArrayList();
+        params.add(new Integer(17));
+        params.add(new Integer(10));
+        
+        Object result = xmlRpcClient.execute("multiplication",params);
+        
+        if (result instanceof Double){
+            assertEquals(170, ((Double) result).intValue());
+        }
+    }
+    
+    
     /*
     @Test
     public void serverConnectionTest() throws IOException{
