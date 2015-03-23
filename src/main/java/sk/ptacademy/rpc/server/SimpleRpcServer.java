@@ -23,6 +23,7 @@ public class SimpleRpcServer extends WebServer {
         xmlRpcHandlerRegistry.registerHandler("substraction", new SubstractionRpcHandler());
         xmlRpcHandlerRegistry.registerHandler("addition", new AdditionRpcHandler());
         xmlRpcHandlerRegistry.registerHandler("multiplication", new MultiplicationRpcHandler());
+        xmlRpcHandlerRegistry.registerHandler("dividing", new DividingRpcHandler());
         this.getXmlRpcServer().setHandlerMapping(xmlRpcHandlerRegistry);
     }
     

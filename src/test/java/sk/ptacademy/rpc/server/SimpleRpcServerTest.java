@@ -66,6 +66,19 @@ public class SimpleRpcServerTest {
         }
     }
     
+    @Test
+    public void testDividing() throws XmlRpcException{
+        List params  = new ArrayList();
+        params.add(new Integer(10));
+        params.add(new Integer(2));
+        
+        Object result = xmlRpcClient.execute("dividing",params);
+        
+        if(result instanceof Double){
+            assertEquals(5, ((Double) result).intValue());
+        }
+    }
+    
     
     /*
     @Test
